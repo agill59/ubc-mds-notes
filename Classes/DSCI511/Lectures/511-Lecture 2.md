@@ -1,7 +1,5 @@
 
 ---
-jupyter: python3
----
 
 [[511-Worksheet 2]]
 [[511-Lab 1]]

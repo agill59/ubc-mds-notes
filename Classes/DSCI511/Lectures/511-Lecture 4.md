@@ -61,16 +61,16 @@ bike_df['Distance'].cumsum().plot.line(fontsize=8, linewidth=3, color='r', ylabe
 
 There are many other kinds of plots you can make:
 
-| Method                 | Plot Type           |
-| ---------------------- | ------------------- |
+| Method             | Plot Type           |
+| ------------------ | ------------------- |
 | `bar` or `barh`    | bar plots           |
-| `hist`               | histogram           |
-| `box`                | boxplot             |
+| `hist`             | histogram           |
+| `box`              | boxplot             |
 | `kde` or `density` | density plots       |
-| `area`               | area plots          |
-| `scatter`            | scatter plots       |
-| `hexbin`             | hexagonal bin plots |
-| `pie`                | pie plots           |
+| `area`             | area plots          |
+| `scatter`          | scatter plots       |
+| `hexbin`           | hexagonal bin plots |
+| `pie`              | pie plots           |
 
 Plus, there are more advanced plotting functions (scatter matrix, lag plots and others) that can be accessed via the `pandas.plotting` module.
 
