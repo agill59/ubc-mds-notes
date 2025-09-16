@@ -8,7 +8,12 @@ title: Introduction to version control with Git and GitHub
 
 ## Learning outcomes
 
-{{< include ../learning_objectives/lo-ch-02.qmd >}}
+1. Implement SSH authentication
+2. Differentiate between the use of GitHub as a remote hosting service for version control and Git as a version control system.
+3. Create a Git repository.
+4. Implement Git’s clone, add, status, commit, pull, and push operations on the command line and their equivalent use in VS Code.
+5. Understand what implies using the staging area in a Git workflow.
+6. Recognize the commit as the primary building block for storing a project version characterized by an attached message and a hash that serves as a unique identifier.
 
 **Platform in focus** Git and GitHub
 

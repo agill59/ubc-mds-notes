@@ -488,16 +488,16 @@ Here is the joint distribution of $L$, $Q$, and $S$:
 
 Table 15: Joint probability mass function (PMF) of $L$, $Q$ and $S$.
 
-|$\ell$|$q$|$s$|$P(L = \ell \cap Q = q \cap S = s)$|
-|---|---|---|---|
-|low|low|yes|0.01|
-|low|high|yes|0.03|
-|high|low|yes|0.03|
-|high|high|yes|0.09|
-|low|low|no|0.21|
-|low|high|no|0.21|
-|high|low|no|0.21|
-|high|high|no|0.21|
+| $\ell$ | $q$  | $s$ | $P(L = \ell \cap Q = q \cap S = s)$ |
+| ------ | ---- | --- | ----------------------------------- |
+| low    | low  | yes | 0.01                                |
+| low    | high | yes | 0.03                                |
+| high   | low  | yes | 0.03                                |
+| high   | high | yes | 0.09                                |
+| low    | low  | no  | 0.21                                |
+| low    | high | no  | 0.21                                |
+| high   | low  | no  | 0.21                                |
+| high   | high | no  | 0.21                                |
 
 Let us answer the first question:
 

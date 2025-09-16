@@ -4,7 +4,12 @@ title: "Git: History, Conflicts, and Ignores"
 
 ## Learning outcomes
 
-{{< include ../learning_objectives/lo-ch-03.qmd >}}
+1. Explore the Git history via `git log` in the terminal and GitHub.
+2. Compare commits using `git diff` in the terminal and GitHub.
+3. Solve merge conflicts at the command line and in VS Code.
+4. Save transitory changes with `git stash`.
+5. Manage to avoid pushing specific local files by including a `.gitignore`.
+6. Differenciate among different ways to restore your project history (`git reset --hard/--soft`, `git revert`) when working on an older version of a project.
 
 **Platform in focus** Git and GitHub
 
@@ -50,7 +55,6 @@ Pay attention that here you are looking at the long version of the hash
 and not the 7-character long version displayed by default in Jupyter Lab or GitHub.
 In both cases, you will be able to identify the commit using its hash.
 
-![](img/gitlog.png)
 
 Adding the flag `--oneline` to the command `git log` will provide you a different format
 for the output, in this case, you get a succint version of the information of each commit.
@@ -262,7 +266,6 @@ You can solve a merge conflict by not accepting either the current changes or th
 
 For example, this notebook of 2 cells:
 
-![alt tag](img/sample_notebook.png)
 
 is encoded by the following JSON:
 ```

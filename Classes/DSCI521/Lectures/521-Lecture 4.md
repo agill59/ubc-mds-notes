@@ -4,7 +4,10 @@ title: Introduction to Quarto and Github Pages
 
 ## Learning outcomes
 
-{{< include ../learning_objectives/lo-ch-04.qmd >}}
+1. Use the `quarto` terminal command to create different quarto projects
+2. Create and edit a Quarto website
+3. Discover how GitHub can be used to serve static websites
+4. Modify a GitHub repository to publish a website
 
 **Platform in focus** Quarto and GitHub
 

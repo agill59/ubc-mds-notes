@@ -501,7 +501,7 @@ $$\mathbb{E}\left[ g(X) \right] = \displaystyle \int_x g(X) \cdot f_X(x) \text{d
 
 Note
 
-We can usually estimate \(\mathbb{E}(X)\) via the **sample mean**
+We can usually estimate $\mathbb{E}(X)$ via the **sample mean**
 
 $$\bar{X} = \frac{1}{n} \sum_{i=1}^n X_i.$$
 
