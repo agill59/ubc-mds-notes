@@ -5,8 +5,6 @@ format: html
 
 ## Slides
 
-<iframe src="../slides/06_lecture-continuous-families/06_lecture-continuous-families.html" width="100%" height="600px" style="border: none;"></iframe>
-
 ## Learning Goals
 
 By the end of this lecture, you should be able to:
