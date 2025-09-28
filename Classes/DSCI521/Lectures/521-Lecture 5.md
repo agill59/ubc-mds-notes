@@ -4,7 +4,13 @@ title: 'RStudio Projects and Literate Programming Documents'
 
 ## Learning outcomes
 
-{{< include ../learning_objectives/lo-ch-05.qmd >}}
+1. Create RProjects in RStudio using `here` to define robust file paths.
+2. Detect the basic components of a dynamic document in Jupyter Notebooks and in R Markdown.
+3. Explain markdown usage in relation to dynamic documents.
+4. Differentiate between code chunks and code cells in RMarkdown and Jupyter Notebooks.
+5. Select appropriate code chunk options for RMarkdown.
+6. Use semantic line breaks for version control files.
+7. Specify metadata in the YAML header block.
 
 **Platform in focus** RStudio IDE
 
