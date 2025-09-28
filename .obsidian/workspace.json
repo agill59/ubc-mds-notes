@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "b76150056948cd36",
+        "id": "e2fe1716b0fbe1f8",
         "type": "tabs",
         "children": [
           {
-            "id": "d4c176906be7fa2b",
+            "id": "02b66826a9eeeb4d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Classes/DSCI511/Lectures/511-Lecture 5.md",
+                "file": "Classes/DSCI511/Labs/511-Lab 3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "511-Lecture 5"
+              "title": "511-Lab 3"
             }
           }
         ]
@@ -171,35 +171,35 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "d4c176906be7fa2b",
+  "active": "2072c29422f956a9",
   "lastOpenFiles": [
-    "Classes/DSCI521/Lectures/521-Lecture 5.md",
-    "Classes/DSCI523/Lectures/523-Lecture 5.md",
-    "Classes/DSCI551/Lectures/551-Lecture 6.md",
-    "Classes/DSCI551/Lectures/551-Lecture 5.md",
-    "Classes/DSCI511/Lectures/511-Lecture 4.md",
-    "Classes/DSCI511/Lectures/511-Lecture 3.md",
-    "Classes/DSCI511/Lectures/511-Lecture 1.md",
-    "Classes/DSCI511/Lectures/511-Lecture 2.md",
-    "Classes/DSCI511/Labs/511-Lab 1.md",
-    "Classes/DSCI511/Labs/511-Lab 2.md",
-    "Classes/DSCI511/Lectures/511-Lecture 5.md",
+    "lab3.md",
+    "Classes/DSCI511/Labs/511-Lab 3.md",
+    "Classes/DSCI521/Labs/521-Lab 3.md",
+    "Classes/DSCI521/Labs/521-Lab 4.md",
+    "Classes/DSCI511/Worksheets/511-Worksheet 7.md",
+    "Classes/DSCI511/Worksheets/511-Worksheet 8.md",
+    "Classes/DSCI511/Worksheets/511-Worksheet 6.md",
+    "Classes/DSCI511/Worksheets/511-Worksheet 5.md",
+    "Classes/DSCI511/Labs/511-Lab 4.md",
     "Classes/DSCI523/Lectures/523-Lecture 6.md",
-    "Classes/DSCI511/Lectures/511-Lecture 6.md",
-    "Classes/DSCI521/Lectures/521-Lecture 6.md",
-    "Classes/DSCI551/Labs/551-Lab 2.md",
-    "Classes/DSCI551/Lectures/551-Lecture 4.md",
-    "HTML import/04_lecture-conditional.md",
-    "Classes/DSCI551/Lectures/551-Lecture 3.md",
-    "HTML import/03_lecture-joint.md",
-    "Classes/DSCI551/Lectures/551-Lecture 2.md",
-    "Classes/DSCI551/DSCI551 - Descriptive Statistics and Probability for Data Science.md",
+    "Classes/DSCI551/Lectures/551-Lecture 8.md",
+    "Classes/DSCI551/Lectures/551-Lecture 7.md",
+    "Classes/DSCI551/Labs/551-Lab 4.md",
+    "Classes/DSCI551/Labs/551-Lab 3.md",
+    "Classes/DSCI523/Worksheets/523-Worksheet 8.md",
+    "Classes/DSCI523/Worksheets/523-Worksheet 7.md",
+    "Classes/DSCI523/Worksheets/523-Worksheet 6.md",
+    "Classes/DSCI523/Worksheets/523-Worksheet 5.md",
+    "Classes/DSCI523/Lectures/523-Lecture 8.md",
+    "Classes/DSCI523/Lectures/523-Lecture 7.md",
+    "Classes/DSCI523/Labs/523-Lab 4.md",
+    "Classes/DSCI523/Labs/523-Lab 3.md",
+    "Classes/DSCI521/Lectures/521-Lecture 8.md",
+    "Classes/DSCI521/Lectures/521-Lecture 7.md",
+    "Classes/DSCI511/Lectures/511-Lecture 8.md",
+    "Classes/DSCI511/Lectures/511-Lecture 7.md",
     "HTML import",
-    "Classes/DSCI551/Lectures/551-Lecture 1.md",
-    "Classes/DSCI521/Labs/521-Lab 2.md",
-    "Classes/DSCI521/Lectures/521-Lecture 4.md",
-    "Classes/DSCI521/Lectures/521-Lecture 3.md",
-    "Classes/DSCI523/Lectures/523-Lecture 4.md",
     "Lecture 3_ Advanced data wrangling with Pandas — DSCI 511 Python Programming for Data Science.pdf",
     "HTML import/Attachments/dsci511_header2.png",
     "HTML import/Attachments/hex_sticker_small.png",
