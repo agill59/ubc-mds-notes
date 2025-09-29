@@ -582,7 +582,6 @@ R has several other functionals outside of `purrr` that you might have already e
 
 ### The `purrr::map*` family of functions
 
-<img src="img/map_family.png" width=900>
 
 *Source: [Advanced R](https://adv-r.hadley.nz/) by Hadley Wickham*
 

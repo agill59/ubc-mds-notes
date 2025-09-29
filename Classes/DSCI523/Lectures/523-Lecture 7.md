@@ -596,6 +596,7 @@ by_country <- gapminder %>%
 print(by_country)
 ```
 
+```R
     [90m# A tibble: 142 × 3[39m
     [90m# Groups:   continent, country [142][39m
        country     continent data             
@@ -611,7 +612,7 @@ print(by_country)
     [90m 9[39m Bangladesh  Asia      [90m<tibble [12 × 4]>[39m
     [90m10[39m Belgium     Europe    [90m<tibble [12 × 4]>[39m
     [90m# … with 132 more rows[39m
-    
+```
 
 (I’m cheating a little by grouping on both continent and country. Given country, continent is fixed, so this doesn’t add any more groups, but it’s an easy way to carry an extra variable along for the ride.)
 
@@ -636,27 +637,18 @@ Let's look at what the first element of the `data` list column looks like:
 by_country$data[[1]]
 ```
 
-
-<table class="dataframe">
-<caption>A tibble: 12 × 4</caption>
-<thead>
-	<tr><th scope=col>year</th><th scope=col>lifeExp</th><th scope=col>pop</th><th scope=col>gdpPercap</th></tr>
-	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>1952</td><td>28.801</td><td> 8425333</td><td>779.4453</td></tr>
-	<tr><td>1957</td><td>30.332</td><td> 9240934</td><td>820.8530</td></tr>
-	<tr><td>1962</td><td>31.997</td><td>10267083</td><td>853.1007</td></tr>
-	<tr><td>1967</td><td>34.020</td><td>11537966</td><td>836.1971</td></tr>
-	<tr><td>1972</td><td>36.088</td><td>13079460</td><td>739.9811</td></tr>
-	<tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr>
-	<tr><td>1987</td><td>40.822</td><td>13867957</td><td>852.3959</td></tr>
-	<tr><td>1992</td><td>41.674</td><td>16317921</td><td>649.3414</td></tr>
-	<tr><td>1997</td><td>41.763</td><td>22227415</td><td>635.3414</td></tr>
-	<tr><td>2002</td><td>42.129</td><td>25268405</td><td>726.7341</td></tr>
-	<tr><td>2007</td><td>43.828</td><td>31889923</td><td>974.5803</td></tr>
-</tbody>
-</table>
+| year | lifeExp | pop      | gdpPercap |
+| ---- | ------- | -------- | --------- |
+| 1952 | 28.801  | 8425333  | 779.4453  |
+| 1957 | 30.332  | 9240934  | 820.8530  |
+| 1962 | 31.997  | 10267083 | 853.1007  |
+| 1967 | 34.020  | 11537966 | 836.1971  |
+| 1972 | 36.088  | 13079460 | 739.9811  |
+| 1987 | 40.822  | 13867957 | 852.3959  |
+| 1992 | 41.674  | 16317921 | 649.3414  |
+| 1997 | 41.763  | 22227415 | 635.3414  |
+| 2002 | 42.129  | 25268405 | 726.7341  |
+| 2007 | 43.828  | 31889923 | 974.5803  |
 
 
 
@@ -677,18 +669,12 @@ data.frame(x = list(c(1, 2, 3), c(3, 4, 5)))
 ```
 
 
-<table class="dataframe">
-<caption>A data.frame: 3 × 2</caption>
-<thead>
-	<tr><th scope=col>x.c.1..2..3.</th><th scope=col>x.c.3..4..5.</th></tr>
-	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>1</td><td>3</td></tr>
-	<tr><td>2</td><td>4</td></tr>
-	<tr><td>3</td><td>5</td></tr>
-</tbody>
-</table>
+| x.c.1..2..3. | x.c.3..4..5. |
+|--------------|--------------|
+| 1            | 3            |
+| 2            | 4            |
+| 3            | 5            |
+
 
 
 
