@@ -79,7 +79,7 @@ A piggy bank.
 
 Here are your **10 net winnings**:
 
-```{r}
+```R
 #| echo: false
 
 set.seed(4)
@@ -314,9 +314,8 @@ Let us answer the following questions together:
 Using the PDF, what is the probability of getting 25% purity? That is, 
 
 $$P(X = 0.25).$$
-:::
 
-::: {.callout-note}
+0
 ## Exercise 22
 
 The PDF evaluates to be $> 1$ in some places on the vertical axis. Does this mean that this is not a valid density? Why is the density in fact valid?
@@ -324,7 +323,7 @@ The PDF evaluates to be $> 1$ in some places on the vertical axis. Does this mea
 
 Now, let us proceed with some in-class questions via [**iClicker**](https://student.iclicker.com/).
 
-::: {.callout-note}
+Still valid since AuC = 1 .
 ## Exercise 23
 
 Using the PDF, what is the probability of getting gas that is $< 50\%$ pure? That is, 
@@ -340,9 +339,8 @@ Select the correct option:
 **C.** 0.25
 
 **D.** 0.5
-:::
 
-::: {.callout-note}
+0.25
 ## Exercise 24
 
 What is the probability of getting gas that is $\leq 50\%$ pure? That is, 
@@ -358,7 +356,8 @@ Select the correct option:
 **C.** 0.749
 
 **D.** 0.75
-:::
+
+0.25
 
 ## Distribution Properties
 

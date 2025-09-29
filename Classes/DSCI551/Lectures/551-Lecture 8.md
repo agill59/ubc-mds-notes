@@ -7,13 +7,6 @@ format:
     number-sections: true
 engine: knitr
 ---
-
-{{< include ./_extensions/r-wasm/live/_knitr.qmd >}}
-
-## Slides
-
-<iframe src="../slides/08_lecture-simulation/08_lecture-simulation.html" width="100%" height="600px" style="border: none;"></iframe>
-
 ## Learning Goals
 
 By the end of this lecture, you should be able to:

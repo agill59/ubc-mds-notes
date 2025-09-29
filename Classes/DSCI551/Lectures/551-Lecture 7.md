@@ -3,10 +3,6 @@ title: 'Lecture 7: Maximum Likelihood Estimation'
 format: html
 ---
 
-## Slides
-
-<iframe src="../slides/07_lecture-maximum-likelihood-estimation/07_lecture-maximum-likelihood-estimation.html" width="100%" height="600px" style="border: none;"></iframe>
-
 ## Learning Goals
 
 By the end of this lecture, you should be able to:
