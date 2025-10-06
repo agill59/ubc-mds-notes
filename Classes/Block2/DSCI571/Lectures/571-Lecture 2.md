@@ -11,7 +11,7 @@ UBC Master of Data Science program, 2025-26
 
 ### Imports
 
-::: {.cell slideshow="{\"slide_type\":\"skip\"}" execution_count="1"}
+
 ``` {.python .cell-code}
 # import the libraries
 import os
@@ -38,9 +38,9 @@ plt.rcParams["font.size"] = 16
 
 DATA_DIR = DATA_DIR = os.path.join(os.path.abspath(".."), "data/")
 ```
-:::
 
-`<br><br>`{=html}
+
+
 
 ### Learning outcomes
 
@@ -64,7 +64,7 @@ By the end of this lesson, you will be able to:
     -   Hyperparameter tuning with cross-validation
     -   Final test evaluation
 
-`<br><br><br><br>`{=html}
+
 
 ## Generalization \[[video](https://youtu.be/iS2hsRRlc2M)\]
 
@@ -81,7 +81,7 @@ patterns.
 So we want to learn from the past but ultimately we want to apply it on
 the future email messages.
 
-![](../img/eva-think.png)
+![[Pasted image 20251006092213.png]]
 
 **How can we generalize from what we've seen to what we haven't seen?**
 
@@ -96,86 +96,43 @@ negative.
 Let's examine how does the decision boundary change for different tree
 depths.
 
-::: {.cell slideshow="{\"slide_type\":\"slide\"}" execution_count="2"}
+
 ``` {.python .cell-code}
 # Toy quiz2 grade data
 classification_df = pd.read_csv(DATA_DIR + "quiz2-grade-toy-classification.csv")
 classification_df.head(10)
 ```
 
-::: {.cell-output .cell-output-display execution_count="2"}
-<div>
-
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 ```
-      ml_experience   class_attendance   lab1   lab2   lab3   lab4   quiz1   quiz2
-  --- --------------- ------------------ ------ ------ ------ ------ ------- --------
-  0   1               1                  92     93     84     91     92      A+
-  1   1               0                  94     90     80     83     91      not A+
-  2   0               0                  78     85     83     80     80      not A+
-  3   0               1                  91     94     92     91     89      A+
-  4   0               1                  77     83     90     92     85      A+
-  5   1               0                  70     73     68     74     71      not A+
-  6   1               0                  80     88     89     88     91      A+
-  7   0               1                  95     93     69     79     75      not A+
-  8   0               0                  97     90     94     99     80      not A+
-  9   1               1                  95     95     94     94     85      not A+
+      ml_experience   class_attendance lab1   lab2   lab3   lab4   quiz1   quiz2
+  --- --------------- --------------- ------ ------ ------ ------ ------- --------
+  0   1               1                92     93     84     91     92      A+
+  1   1               0                94     90     80     83     91      not A+
+  2   0               0                78     85     83     80     80      not A+
+  3   0               1                91     94     92     91     89      A+
+  4   0               1                77     83     90     92     85      A+
+  5   1               0                70     73     68     74     71      not A+
+  6   1               0                80     88     89     88     91      A+
+  7   0               1                95     93     69     79     75      not A+
+  8   0               0                97     90     94     99     80      not A+
+  9   1               1                95     95     94     94     85      not A+
 
-```{=html}
-
-</div>
 ```
 
-</div>
-:::
-:::
-
-::: {.cell slideshow="{\"slide_type\":\"slide\"}" execution_count="3"}
 ``` {.python .cell-code}
 X = classification_df.drop(["quiz2"], axis=1)
 y = classification_df["quiz2"]
 ```
-:::
 
-::: {.cell slideshow="{\"slide_type\":\"-\"}" execution_count="4"}
+
+
 ``` {.python .cell-code}
 X_subset = X[["lab4", "quiz1"]]  # Let's consider a subset of the data for visualization
 X_subset.head()
 ```
 
-::: {.cell-output .cell-output-display execution_count="4"}
-<div>
-
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 ```
+
       lab4   quiz1
   --- ------ -------
   0   91     92
@@ -183,20 +140,11 @@ X_subset.head()
   2   80     80
   3   91     89
   4   92     85
-
-```{=html}
-
-</div>
 ```
-
-</div>
-:::
-:::
 
 In the following model, this decision boundary is created by asking one
 question.
 
-::: {.cell scrolled="true" execution_count="5"}
 ``` {.python .cell-code}
 depth = 1
 model = DecisionTreeClassifier(max_depth=depth)
@@ -208,19 +156,15 @@ plot_tree_decision_boundary_and_tree(
 )
 ```
 
-::: {.cell-output .cell-output-stdout}
-    Error:   0.286
-:::
-
-::: {.cell-output .cell-output-display}
+```
+Error:   0.286
+```
 ![](img2/cell-6-output-2.png)
-:::
-:::
 
 In the following model, this decision boundary is created by asking two
 questions.
 
-::: {.cell execution_count="6"}
+
 ``` {.python .cell-code}
 depth = 2
 model = DecisionTreeClassifier(max_depth=depth)
@@ -232,18 +176,14 @@ plot_tree_decision_boundary_and_tree(
 )
 ```
 
-::: {.cell-output .cell-output-stdout}
-    Error:   0.190
-:::
-
-::: {.cell-output .cell-output-display}
+```
+Error:   0.190
+```
 ![](img2/cell-7-output-2.png)
-:::
-:::
 
 Let's look at the decision boundary with depth = 4.
 
-::: {.cell slideshow="{\"slide_type\":\"-\"}" execution_count="7"}
+
 ``` {.python .cell-code}
 depth = 4
 model = DecisionTreeClassifier(max_depth=depth)
@@ -255,18 +195,14 @@ plot_tree_decision_boundary_and_tree(
 )
 ```
 
-::: {.cell-output .cell-output-stdout}
+```
     Error:   0.048
-:::
-
-::: {.cell-output .cell-output-display}
+```
 ![](img2/cell-8-output-2.png)
-:::
-:::
 
 Let's look at the decision boundary with depth = 6.
 
-::: {.cell slideshow="{\"slide_type\":\"-\"}" execution_count="8"}
+
 ``` {.python .cell-code}
 depth = 6
 model = DecisionTreeClassifier(max_depth=depth)
@@ -278,21 +214,19 @@ plot_tree_decision_boundary_and_tree(
 )
 ```
 
-::: {.cell-output .cell-output-stdout}
+```
     Error:   0.000
-:::
 
-::: {.cell-output .cell-output-stderr}
+
+```
     /Users/kvarada/miniforge3/envs/571/lib/python3.12/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but DecisionTreeClassifier was fitted with feature names
       warnings.warn(
-:::
 
-::: {.cell-output .cell-output-display}
+
+
 ![](img2/cell-9-output-3.png)
-:::
-:::
 
-::: {.cell slideshow="{\"slide_type\":\"slide\"}" execution_count="9"}
+
 ``` {.python .cell-code}
 max_depths = np.arange(1, 18)
 errors = []
@@ -306,19 +240,17 @@ plt.xlabel("max depth")
 plt.ylabel("error");
 ```
 
-::: {.cell-output .cell-output-display}
+
 ![](img2/cell-10-output-1.png)
-:::
-:::
 
 -   Our model has 0% error for depths \>= 6!!
 -   But it's also becoming more and more specific and sensitive to the
     training data.\
 -   Is it good or bad?
 
-`zmdknhvrvvyx Note  :class: note Although the plot above (complexity hyperparameter vs error) is more popular, we could also look at the same plot flip the $y$-axis, i.e., consider accuracy instead of error.`
+` Note: Although the plot above (complexity hyperparameter vs error) is more popular, we could also look at the same plot flip the $y$-axis, i.e., consider accuracy instead of error.`
 
-::: {.cell execution_count="10"}
+
 ``` {.python .cell-code}
 max_depths = np.arange(1, 18)
 accuracies = []
@@ -332,14 +264,12 @@ plt.xlabel("max depth")
 plt.ylabel("accuracy");
 ```
 
-::: {.cell-output .cell-output-display}
+
 ![](img2/cell-11-output-1.png)
-:::
-:::
 
 ### 🤔 Eva's questions
 
-![](../img/eva-think.png)
+![[Pasted image 20251006092213.png]]
 
 At this point Eva is wondering about the following questions.
 
@@ -358,7 +288,7 @@ To better understand the material in the next sections, think about
 these questions on your own or discuss them with your friend/neighbour
 before proceeding.
 
-`<br><br><br><br>`{=html}
+
 
 ### Generalization: Fundamental goal of ML
 
@@ -371,9 +301,8 @@ examples beyond this training data.
 -   Example: Imagine that a learner sees the following images and
     corresponding labels.
 
-![](../img/generalization-train.png) `<!-- <center>
-<img src='img/generalization-train.png' width="600" height="600" />
-</center>     -->`{=html}
+![[Pasted image 20251006092417.png]]
+
 
 ### Generalizing to unseen data
 
@@ -381,13 +310,8 @@ examples beyond this training data.
     prediction.
 -   What prediction would you expect for each image?
 
-![](../img/generalization-predict.png)
+![[Pasted image 20251006092448.png]]
 
-```{=html}
-<!-- <center>
-<img src='img/generalization-predict.png' width="1000" height="1000" />
-</center>     -->
-```
 -   Goal: We want the learner to be able to generalize beyond what it
     has seen in the training data.
 -   But these new examples should be representative of the training
@@ -408,7 +332,7 @@ examples beyond this training data.
 -   We are interested in the error on the entire distribution
     -   ... But we do not have access to the entire distribution 😞
 
-`<br><br><br><br>`{=html}
+
 
 ## Data Splitting \[[video](https://youtu.be/h2AEobwcUQw)\]
 
@@ -421,27 +345,19 @@ data to get a sense of how well the model would be able to generalize. -
 Pretend that the kept aside data is representative of the real
 distribution $D$ of data.
 
-![](../img/eva-good-idea.png)
+![[Pasted image 20251006092526.png]]
 
-::: {.cell scrolled="true" slideshow="{\"slide_type\":\"slide\"}" execution_count="11"}
+
 ``` {.python .cell-code}
 # scikit-learn train_test_split
 url = "https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html"
 HTML("<iframe src=%s width=1000 height=800></iframe>" % url)
 ```
 
-::: {.cell-output .cell-output-stderr}
+```
     /Users/kvarada/miniforge3/envs/571/lib/python3.12/site-packages/IPython/core/display.py:431: UserWarning: Consider using IPython.display.IFrame instead
       warnings.warn("Consider using IPython.display.IFrame instead")
-:::
-
-::: {.cell-output .cell-output-display execution_count="11"}
-```{=html}
-<iframe src=https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html width=1000 height=800></iframe>
 ```
-:::
-:::
-
 -   We can pass `X` and `y` or a dataframe with both `X` and `y` in it.
 -   We can also specify the train or test split sizes.
 
@@ -453,12 +369,8 @@ HTML("<iframe src=%s width=1000 height=800></iframe>" % url)
 -   Usually when we do machine learning we split the data before doing
     anything and put the test data in an imaginary chest lock.
 
-![](../img/train-test-split.png)
+![[Pasted image 20251006092558.png]]
 
-```{=html}
-<!-- <img src='img/train-test-split.png' width="1500" height="1500" /> -->
-```
-::: {.cell slideshow="{\"slide_type\":\"slide\"}" execution_count="12"}
 ``` {.python .cell-code}
 # Let's demonstrate this with the canada usa cities data
 # The data is available in the data directory
@@ -466,31 +378,12 @@ df = pd.read_csv(DATA_DIR + "canada_usa_cities.csv")
 X = df.drop(columns=["country"])
 y = df["country"]
 ```
-:::
 
-::: {.cell slideshow="{\"slide_type\":\"slide\"}" execution_count="13"}
+
 ``` {.python .cell-code}
 X
 ```
 
-::: {.cell-output .cell-output-display execution_count="13"}
-<div>
-
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 ```
          longitude   latitude
   ------ ----------- ----------
@@ -505,23 +398,12 @@ X
   206    -79.2506    42.9931
   207    -72.9406    45.6275
   208    -79.4608    46.3092
-
-```{=html}
-
-<p>209 rows × 2 columns</p>
-</div>
 ```
-
-</div>
-:::
-:::
-
-::: {.cell execution_count="14"}
-``` {.python .cell-code}
+```
 y
 ```
 
-::: {.cell-output .cell-output-display execution_count="14"}
+```
     0         USA
     1         USA
     2         USA
@@ -534,10 +416,8 @@ y
     207    Canada
     208    Canada
     Name: country, Length: 209, dtype: object
-:::
-:::
+```
 
-::: {.cell slideshow="{\"slide_type\":\"slide\"}" execution_count="15"}
 ``` {.python .cell-code}
 from sklearn.model_selection import train_test_split
 
@@ -562,8 +442,7 @@ shape_df = pd.DataFrame(shape_dict)
 HTML(shape_df.to_html(index=False))
 ```
 
-::: {.cell-output .cell-output-display execution_count="15"}
-<div>
+```
 
   Data portion   Shape
   -------------- ----------
@@ -574,16 +453,13 @@ HTML(shape_df.to_html(index=False))
   X_test         (42, 2)
   y_test         (42,)
 
-</div>
-:::
-:::
-
+```
 #### Creating `train_df` and `test_df`
 
 -   Sometimes we want to keep the target in the train split for EDA or
     for visualization.
 
-::: {.cell execution_count="16"}
+
 ``` {.python .cell-code}
 train_df, test_df = train_test_split(
     df, test_size=0.2, random_state=123
@@ -593,24 +469,7 @@ X_test, y_test = test_df.drop(columns=["country"]), test_df["country"]
 train_df.head()
 ```
 
-::: {.cell-output .cell-output-display execution_count="16"}
-<div>
 
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 ```
         longitude   latitude   country
   ----- ----------- ---------- ---------
@@ -620,69 +479,52 @@ train_df.head()
   188   -73.2533    45.3057    Canada
   187   -67.9245    47.1652    Canada
 
-```{=html}
-
-</div>
 ```
 
-</div>
-:::
-:::
-
-::: {.cell slideshow="{\"slide_type\":\"slide\"}" execution_count="17"}
 ``` {.python .cell-code}
 mglearn.discrete_scatter(X.iloc[:, 0], X.iloc[:, 1], y, s=8)
 plt.xlabel("longitude")
 plt.ylabel("latitude");
 ```
 
-::: {.cell-output .cell-output-display}
-![](img2/cell-18-output-1.png)
-:::
-:::
 
-::: {.cell slideshow="{\"slide_type\":\"slide\"}" execution_count="18"}
+![](img2/cell-18-output-1.png)
+
+
 ``` {.python .cell-code}
 model = DecisionTreeClassifier()
 model.fit(X_train, y_train)
 custom_plot_tree(model, feature_names = X_train.columns.tolist())
 ```
 
-::: {.cell-output .cell-output-display}
+
 ![](img2/cell-19-output-1.png)
-:::
-:::
 
 Let's examine the train and test accuracies with the split now.
 
-::: {.cell slideshow="{\"slide_type\":\"-\"}" execution_count="19"}
+
 ``` {.python .cell-code}
 print("Train accuracy:   %0.3f" % model.score(X_train, y_train))
 print("Test accuracy:   %0.3f" % model.score(X_test, y_test))
 ```
 
-::: {.cell-output .cell-output-stdout}
+```
     Train accuracy:   1.000
     Test accuracy:   0.762
-:::
-:::
+```
 
-::: {.cell execution_count="20"}
 ``` {.python .cell-code}
 plot_tree_decision_boundary_and_tree(model, X, y, height=10, width=18, eps=10)
 ```
 
-::: {.cell-output .cell-output-stderr}
+```
     /Users/kvarada/miniforge3/envs/571/lib/python3.12/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but DecisionTreeClassifier was fitted with feature names
       warnings.warn(
-:::
 
-::: {.cell-output .cell-output-display}
+
+```
 ![](img2/cell-21-output-2.png)
-:::
-:::
 
-::: {.cell slideshow="{\"slide_type\":\"slide\"}" execution_count="21"}
 ``` {.python .cell-code}
 fig, ax = plt.subplots(1, 2, figsize=(16, 6), subplot_kw={"xticks": (), "yticks": ()})
 plot_tree_decision_boundary(
@@ -707,17 +549,15 @@ plot_tree_decision_boundary(
 )
 ```
 
-::: {.cell-output .cell-output-stderr}
+```
     /Users/kvarada/miniforge3/envs/571/lib/python3.12/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but DecisionTreeClassifier was fitted with feature names
       warnings.warn(
     /Users/kvarada/miniforge3/envs/571/lib/python3.12/site-packages/sklearn/base.py:493: UserWarning: X does not have valid feature names, but DecisionTreeClassifier was fitted with feature names
       warnings.warn(
-:::
 
-::: {.cell-output .cell-output-display}
+
+```
 ![](img2/cell-22-output-2.png)
-:::
-:::
 
 -   Useful arguments of `train_test_split`:
     -   `test_size`
@@ -750,11 +590,8 @@ plot_tree_decision_boundary(
 -   Sometimes it's a good idea to have a separate data for
     hyperparameter tuning.
 
-![](../img/train-valid-test-split.png)
+![[Pasted image 20251006092742.png]]
 
-```{=html}
-<!-- <img src='img/train-valid-test-split.png' width="1500" height="1500" /> -->
-```
 -   We will try to use "validation" to refer to data where we have
     access to the target values.
     -   But, unlike the training data, we only use this for
@@ -771,7 +608,7 @@ plot_tree_decision_boundary(
 Note that there isn't good concensus on the terminology of what is
 validation and what is test.
 
-`zmdknhvrvvyx Note  :class: note Validation data is also referred to as **development data** or **dev set** for short.`
+` Note: Validation data is also referred to as **development data** or **dev set** for short.`
 
 ### "Deployment" data
 
@@ -815,11 +652,11 @@ $E_{train} < E_{validation} < E_{test} < E_{deployment}$.
 
 `zmdknhvrvvyx V's Solutions! :class: tip, dropdown`
 
-`<br><br><br><br>`{=html}
+
 
 ## Break (5 min)
 
-![](../img/eva-coffee.png)
+![[Pasted image 20251006092824.png]]
 
 ## Cross-validation \[[video](https://youtu.be/4cv8VYonepA)\]
 
@@ -832,11 +669,9 @@ $E_{train} < E_{validation} < E_{test} < E_{deployment}$.
 -   You might be unlucky with your splits such that they don't align
     well or don't well represent your test data.
 
-![](../img/train-valid-test-split.png)
+![[Pasted image 20251006092742.png]]
 
-```{=html}
-<!-- <img src='img/train-valid-test-split.png' width="1500" height="1500" /> -->
-```
+
 ### Cross-validation to the rescue!!
 
 -   Cross-validation provides a solution to this problem.
@@ -846,48 +681,42 @@ $E_{train} < E_{validation} < E_{test} < E_{deployment}$.
 -   Note that cross-validation doesn't shuffle the data; it's done in
     `train_test_split`.
 
-![](../img/cross-validation.png)
-`<!-- <img src='img/cross-validation.png' width="1500"> -->`{=html}
-
+![[Pasted image 20251006092910.png]]
 -   Each fold gives a score and we usually average our $k$ results.
 -   It's better to examine the variation in the scores across folds.\
 -   Gives a more **robust** measure of error on unseen data.
 
 ### Cross-validation using `scikit-learn`
 
-::: {.cell execution_count="22"}
+
 ``` {.python .cell-code}
 from sklearn.model_selection import cross_val_score, cross_validate
 ```
-:::
+
 
 #### `cross_val_score`
 
-::: {.cell execution_count="23"}
+
 ``` {.python .cell-code}
 model = DecisionTreeClassifier(max_depth=4)
 cv_scores = cross_val_score(model, X_train, y_train, cv=10)
 cv_scores
 ```
 
-::: {.cell-output .cell-output-display execution_count="23"}
+```
     array([0.76470588, 0.82352941, 0.70588235, 0.94117647, 0.82352941,
            0.82352941, 0.70588235, 0.9375    , 0.9375    , 0.9375    ])
-:::
-:::
+```
 
-::: {.cell execution_count="24"}
 ``` {.python .cell-code}
 print(f"Average cross-validation score = {np.mean(cv_scores):.2f}")
 print(f"Standard deviation of cross-validation score = {np.std(cv_scores):.2f}")
 ```
 
-::: {.cell-output .cell-output-stdout}
+```
     Average cross-validation score = 0.84
     Standard deviation of cross-validation score = 0.09
-:::
-:::
-
+```
 Under the hood
 
 -   It creates `cv` folds on the data.
@@ -900,30 +729,12 @@ Under the hood
 -   Similar to `cross_val_score` but more powerful.
 -   Gives us access to training and validation scores.
 
-::: {.cell execution_count="25"}
+
 ``` {.python .cell-code}
 scores = cross_validate(model, X_train, y_train, cv=10, return_train_score=True)
 pd.DataFrame(scores)
 ```
 
-::: {.cell-output .cell-output-display execution_count="25"}
-<div>
-
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 ```
       fit_time   score_time   test_score   train_score
   --- ---------- ------------ ------------ -------------
@@ -937,39 +748,12 @@ pd.DataFrame(scores)
   7   0.000609   0.000427     0.937500     0.900662
   8   0.000598   0.000422     0.937500     0.900662
   9   0.000587   0.000419     0.937500     0.900662
-
-```{=html}
-
-</div>
 ```
 
-</div>
-:::
-:::
-
-::: {.cell execution_count="26"}
 ``` {.python .cell-code}
 pd.DataFrame(pd.DataFrame(scores).mean())
 ```
 
-::: {.cell-output .cell-output-display execution_count="26"}
-<div>
-
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 ```
                 0
   ------------- ----------
@@ -978,32 +762,21 @@ pd.DataFrame(pd.DataFrame(scores).mean())
   test_score    0.840074
   train_score   0.906865
 
-```{=html}
-
-</div>
 ```
 
-</div>
-:::
-:::
 
-``` {important}
 Keep in mind that cross-validation does not return a model. It is not a way to build a model that can be applied to new data. The purpose of cross-validation is to **evaluate** how well the model will generalize to unseen data. 
-```
 
-``` {seealso}
+
+
 Note that both `cross_val_score` and `cross_validate` functions do not shuffle the data. Check out [`StratifiedKFold`](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html#sklearn.model_selection.StratifiedKFold), where proportions of classes is the same in each fold as they are in the whole dataset. By default, `sklearn` uses `StratifiedKFold` when carrying out cross-validation for classification problems. 
-```
 
-::: {.cell slideshow="{\"slide_type\":\"skip\"}" execution_count="27"}
 ``` {.python .cell-code}
 mglearn.plots.plot_cross_validation()
 ```
 
-::: {.cell-output .cell-output-display}
+
 ![](img2/cell-28-output-1.png)
-:::
-:::
 
 #### Our typical supervised learning set up is as follows:
 
@@ -1019,7 +792,7 @@ mglearn.plots.plot_cross_validation()
 -   If this test error is "reasonable" we deploy the model which will be
     used on new unseen examples.
 
-::: {.cell slideshow="{\"slide_type\":\"slide\"}" execution_count="28"}
+
 ``` {.python .cell-code}
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
 model = DecisionTreeClassifier(max_depth=10)
@@ -1027,24 +800,6 @@ scores = cross_validate(model, X_train, y_train, cv=10, return_train_score=True)
 pd.DataFrame(scores)
 ```
 
-::: {.cell-output .cell-output-display execution_count="28"}
-<div>
-
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 ```
       fit_time   score_time   test_score   train_score
   --- ---------- ------------ ------------ -------------
@@ -1059,16 +814,11 @@ pd.DataFrame(scores)
   8   0.000622   0.000418     0.666667     1.000000
   9   0.000602   0.000416     0.733333     1.000000
 
-```{=html}
 
-</div>
 ```
 
-</div>
-:::
-:::
 
-::: {.cell slideshow="{\"slide_type\":\"skip\"}" execution_count="29"}
+
 ``` {.python .cell-code}
 def mean_std_cross_val_scores(model, X_train, y_train, **kwargs):
     """
@@ -1085,9 +835,9 @@ def mean_std_cross_val_scores(model, X_train, y_train, **kwargs):
 
     return pd.Series(data=out_col, index=mean_scores.index)
 ```
-:::
 
-::: {.cell slideshow="{\"slide_type\":\"skip\"}" execution_count="30"}
+
+
 ``` {.python .cell-code}
 results = {}
 results["Decision tree"] = mean_std_cross_val_scores(
@@ -1096,76 +846,51 @@ results["Decision tree"] = mean_std_cross_val_scores(
 pd.DataFrame(results).T
 ```
 
-::: {.cell-output .cell-output-stderr}
+```
     /var/folders/b3/g26r0dcx4b35vf3nk31216hc0000gr/T/ipykernel_10817/2246468746.py:12: FutureWarning: Series.__getitem__ treating keys as positions is deprecated. In a future version, integer keys will always be treated as labels (consistent with DataFrame behavior). To access a value by position, use `ser.iloc[pos]`
       out_col.append((f"%0.3f (+/- %0.3f)" % (mean_scores[i], std_scores[i])))
-:::
 
-::: {.cell-output .cell-output-display execution_count="30"}
-<div>
 
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-```
-                  fit_time            score_time          test_score          train_score
-  --------------- ------------------- ------------------- ------------------- -------------------
-  Decision tree   0.001 (+/- 0.000)   0.000 (+/- 0.000)   0.782 (+/- 0.059)   0.992 (+/- 0.014)
-
-```{=html}
-
-</div>
 ```
 
-</div>
-:::
-:::
+```
+
+train_score     fit_time            score_time          test_score          
+  --------------- ------------------- ------------------- -------------------
+DT  0.001 (+/- 0.000)  0.000 (+/- 0.000)  0.782 (+/- 0.059)  0.992 (+/- 0.014)
+```
+
 
 -   How do we know whether this test score is reasonable?
 
-\`\`\`zmdknhvrvvyx Exercise 3.3: Cross-validation
+Exercise 3.3: Cross-validation
 
 
-    ## Underfitting, overfitting, the fundamental trade-off, the golden rule [[video](https://youtu.be/Ihay8yE5KTI)]
+## Underfitting, overfitting, the fundamental trade-off, the golden rule [[video](https://youtu.be/Ihay8yE5KTI)]
 
-    ### Types of errors
+### Types of errors
 
-    Imagine that your train and validation errors do not align with each other. How do you diagnose the problem?  
+Imagine that your train and validation errors do not align with each other. How do you diagnose the problem?  
 
-    We're going to think about 4 types of errors:
+We're going to think about 4 types of errors:
 
-    - $E_\textrm{train}$ is your training error (or mean train error from cross-validation).
-    - $E_\textrm{valid}$ is your validation error (or mean validation error from cross-validation).
-    - $E_\textrm{test}$ is your test error.
-    - $E_\textrm{best}$ is the best possible error you could get for a given problem.
+- $E_\textrm{train}$ is your training error (or mean train error from cross-validation).
+- $E_\textrm{valid}$ is your validation error (or mean validation error from cross-validation).
+- $E_\textrm{test}$ is your test error.
+- $E_\textrm{best}$ is the best possible error you could get for a given problem.
 
-    ### Underfitting 
+### Underfitting 
 
-    ::: {.cell slideshow='{"slide_type":"-"}' execution_count=31}
-    ``` {.python .cell-code}
-    model = DecisionTreeClassifier(max_depth=1)  # decision stump
-    scores = cross_validate(model, X_train, y_train, cv=10, return_train_score=True)
-    print("Train error:   %0.3f" % (1 - np.mean(scores["train_score"])))
-    print("Validation error:   %0.3f" % (1 - np.mean(scores["test_score"])))
 
-::: {.cell-output .cell-output-stdout}
+``` {.python .cell-code}
+model = DecisionTreeClassifier(max_depth=1)  # decision stump
+scores = cross_validate(model, X_train, y_train, cv=10, return_train_score=True)
+print("Train error:   %0.3f" % (1 - np.mean(scores["train_score"])))
+print("Validation error:   %0.3f" % (1 - np.mean(scores["test_score"])))
+
+```
     Train error:   0.188
     Validation error:   0.212
-:::
-
-:::
 
 -   If your model is too simple, like `DummyClassifier` or
     `DecisionTreeClassifier` with `max_depth=1`, it's not going to pick
@@ -1178,7 +903,7 @@ pd.DataFrame(results).T
 
 ### Overfitting
 
-::: {.cell slideshow="{\"slide_type\":\"-\"}" execution_count="32"}
+
 ``` {.python .cell-code}
 model = DecisionTreeClassifier(max_depth=None)
 scores = cross_validate(model, X_train, y_train, cv=10, return_train_score=True)
@@ -1186,12 +911,10 @@ print("Train error:   %0.3f" % (1 - np.mean(scores["train_score"])))
 print("Validation error:   %0.3f" % (1 - np.mean(scores["test_score"])))
 ```
 
-::: {.cell-output .cell-output-stdout}
+```
     Train error:   0.000
     Validation error:   0.220
-:::
-:::
-
+```
 -   If your model is very complex, like a
     `DecisionTreeClassifier(max_depth=None)`, then you will learn
     unreliable patterns in order to get every single training example
@@ -1211,7 +934,7 @@ print("Validation error:   %0.3f" % (1 - np.mean(scores["test_score"])))
 -   So the validation error does not necessarily decrease with the
     training error.
 
-::: {.cell slideshow="{\"slide_type\":\"-\"}" execution_count="33"}
+
 ``` {.python .cell-code}
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1)
 results_dict = {
@@ -1235,17 +958,15 @@ for depth in param_grid["max_depth"]:
 results_df = pd.DataFrame(results_dict)
 results_df = results_df.set_index("depth")
 ```
-:::
 
-::: {.cell slideshow="{\"slide_type\":\"slide\"}" execution_count="34"}
+
+
 ``` {.python .cell-code}
 results_df[["mean_train_error", "mean_cv_error"]].plot();
 ```
 
-::: {.cell-output .cell-output-display}
+
 ![](img2/cell-35-output-1.png)
-:::
-:::
 
 -   Here, for larger depths we observe that the training error is close
     to 0 but validation error goes up and down.
@@ -1273,9 +994,9 @@ but $E_\textrm{valid}-E_\textrm{train}$ tends to go up.**
 :   the tendency to learn random things irrespective of the real signal
     (high variance corresponds to overfitting)
 
-``` {seealso}
+
 Check out [this article by Pedro Domingos](https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf) for some approachable explanation on machine learning fundamentals and bias-variance tradeoff. 
-```
+
 
 ### How to pick a model that would generalize better?
 
@@ -1283,13 +1004,8 @@ Check out [this article by Pedro Domingos](https://homes.cs.washington.edu/~pedr
 -   We want to be consistent with the training data but we don't to rely
     too much on it.
 
-```{=html}
-<!-- <center>
-<img src='img/malp_0201.png' width="800" height="800" />
-</center>    
- -->
-```
-![](../img/malp_0201.png)
+
+![[Pasted image 20251006093549.png]]
 
 [source](https://learning.oreilly.com/library/view/introduction-to-machine/9781449369880/ch02.html#relation-of-model-complexity-to-dataset-size)
 
@@ -1297,7 +1013,7 @@ Check out [this article by Pedro Domingos](https://homes.cs.washington.edu/~pedr
     common practice is to pick the model with minimum cross-validation
     error.
 
-::: {.cell slideshow="{\"slide_type\":\"skip\"}" execution_count="35"}
+
 ``` {.python .cell-code}
 def cross_validate_std(*args, **kwargs):
     """Like cross_validate, except also gives the standard deviation of the score"""
@@ -1308,31 +1024,13 @@ def cross_validate_std(*args, **kwargs):
         res_mean["std_train_score"] = res["train_score"].std()
     return res_mean
 ```
-:::
 
-::: {.cell slideshow="{\"slide_type\":\"-\"}" execution_count="36"}
+
+
 ``` {.python .cell-code}
 results_df
 ```
 
-::: {.cell-output .cell-output-display execution_count="36"}
-<div>
-
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 ```
           mean_train_error   mean_cv_error   std_cv_error   std_train_error
   ------- ------------------ --------------- -------------- -----------------
@@ -1353,18 +1051,12 @@ results_df
   14      0.000000           0.229583        0.089354       0.000000
   15      0.000000           0.242083        0.086932       0.000000
 
-```{=html}
-
-</div>
 ```
 
-</div>
-:::
-:::
 
 ### test score vs. cross-validation score
 
-::: {.cell slideshow="{\"slide_type\":\"-\"}" execution_count="37"}
+
 ``` {.python .cell-code}
 best_depth = results_df.index.values[np.argmin(results_df["mean_cv_error"])]
 print(
@@ -1376,30 +1068,26 @@ print(
 )
 ```
 
-::: {.cell-output .cell-output-stdout}
+```
     The minimum validation error is 0.185 at max_depth = 5 
-:::
-:::
-
+```
 -   Let's pick `max_depth`= 5 and try this model on the test set.
 
-::: {.cell slideshow="{\"slide_type\":\"-\"}" execution_count="38"}
+
 ``` {.python .cell-code}
 model = DecisionTreeClassifier(max_depth=best_depth)
 model.fit(X_train, y_train)
 print(f"Error on test set: {1 - model.score(X_test, y_test):.2f}")
 ```
 
-::: {.cell-output .cell-output-stdout}
+```
     Error on test set: 0.19
-:::
-:::
-
+```
 -   The test error is comparable with the cross-validation error.
 -   Do we feel confident that this model would give similar performace
     when deployed?
 
-### The golden rule `<a name="4"></a>`{=html}
+### The golden rule 
 
 -   Even though we care the most about test error **THE TEST DATA CANNOT
     INFLUENCE THE TRAINING PHASE IN ANY WAY**.
@@ -1410,56 +1098,29 @@ print(f"Error on test set: {1 - model.score(X_test, y_test):.2f}")
 
 #### Golden rule violation: Example 1
 
-![](../img/golden_rule_violation.png)
+![[Pasted image 20251006093817.png]]
 
-```{=html}
-<!-- <center>
-<img src='img/golden_rule_violation.png' width="500" height="500" />
-</center>    
- -->
-```
-```{=html}
-<blockquote>
-```
+
 ... He attempted to reproduce the research, and found a major flaw:
 there was some overlap in the data used to both train and test the
 model.
-```{=html}
-</blockquote>
-```
+
 #### Golden rule violation: Example 2
 
-```{=html}
-<!-- <center>
-<img src='img/golden_rule_violation_2.png' width="500" height="500" />
-</center>    
- -->
-```
-![](../img/golden_rule_violation_2.png)
+![[Pasted image 20251006093924.png]]
 
-```{=html}
-<blockquote>
-```
 ... The Challenge rules state that you must only test your code twice a
 week, because there's an element of chance to the results. Baidu has
 admitted that it used multiple email accounts to test its code roughly
 200 times in just under six months -- over four times what the rules
 allow.
-```{=html}
-</blockquote>
-```
+
 ### How can we avoid violating golden rule?
 
 -   Recall that when we split data, we put our test set in an imaginary
     vault.
 
-```{=html}
-<!-- <center>
-<img src='img/train-test-split.png' width="1500" height="1500" />
-</center>    
- -->
-```
-![](../img/train-test-split.png)
+![[Pasted image 20251006092558.png]]
 
 ### Here is the workflow we'll generally follow.
 
@@ -1476,7 +1137,7 @@ allow.
 **Again, there are many subtleties here we'll discuss the golden rule
 multiple times throughout the course.**
 
-`<br><br><br><br>`{=html}
+
 
 ## ❓❓ Questions for you
 
@@ -1495,7 +1156,7 @@ multiple times throughout the course.**
 -   (E) A decision stump on a complicated classification problem is
         likely to underfit.
 
-\`\`\`zmdknhvrvvyx V's Solutions! :class: tip, dropdown
+ V's Solutions! :class: tip, dropdown
 
 
     ### iClicker Exercise 2.3
@@ -1524,7 +1185,7 @@ Which of the following statements about **overfitting** is true?
 -   (D) Overfitting occurs when the model learns the training data too
         closely, including its noise and outliers.
 
-`zmdknhvrvvyx V's Solutions! :class: tip, dropdown`
+` V's Solutions! :class: tip, dropdown`
 
 ### iClicker Exercise 2.5
 
@@ -1537,11 +1198,11 @@ learning model.
         parameter or features
 -   (D) Use a smaller dataset for training.
 
-\`\`\`zmdknhvrvvyx V's Solutions! :class: tip, dropdown
+V's Solutions! :class: tip, dropdown
 
-\`\`\`
 
-`<br><br>`{=html}
+
+
 
 ## Summary and reflection
 
@@ -1568,4 +1229,4 @@ learning model.
     -   One-hot encoding
     -   `sklearn` pipelines
 
-![](../img/eva-seeyou.png)
+

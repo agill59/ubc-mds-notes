@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Classes/DSCI511/Labs/511-Lab 3.md",
+                "file": "Classes/Block2/DSCI571/Lectures/571-Lecture 2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "511-Lab 3"
+              "title": "571-Lecture 2"
             }
           }
         ]
@@ -173,8 +173,25 @@
   },
   "active": "2072c29422f956a9",
   "lastOpenFiles": [
-    "lab3.md",
+    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006093924.png",
+    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006093817.png",
+    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006093549.png",
+    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006092910.png",
+    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006092824.png",
+    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006092742.png",
+    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006092558.png",
+    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006092526.png",
+    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006092448.png",
+    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006092417.png",
+    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006092213.png",
+    "Classes/Block2/DSCI571/Lectures/571-Lecture 1.md",
+    "Classes/Block2/DSCI571/Lectures/571-Lecture 2.md",
+    "Classes/Block2/DSCI531/Lectures/531-Lecture 1.md",
+    "Classes/Block2/DSCI531/Lectures/531-Lecture 2.md",
+    "Classes/Block2/DSCI571/Lectures/571-Lecture 7.md",
+    "UBC-MDS.md",
     "Classes/DSCI511/Labs/511-Lab 3.md",
+    "lab3.md",
     "Classes/DSCI521/Labs/521-Lab 3.md",
     "Classes/DSCI521/Labs/521-Lab 4.md",
     "Classes/DSCI511/Worksheets/511-Worksheet 7.md",
@@ -192,17 +209,8 @@
     "Classes/DSCI523/Worksheets/523-Worksheet 6.md",
     "Classes/DSCI523/Worksheets/523-Worksheet 5.md",
     "Classes/DSCI523/Lectures/523-Lecture 8.md",
-    "Classes/DSCI523/Lectures/523-Lecture 7.md",
-    "Classes/DSCI523/Labs/523-Lab 4.md",
-    "Classes/DSCI523/Labs/523-Lab 3.md",
-    "Classes/DSCI521/Lectures/521-Lecture 8.md",
-    "Classes/DSCI521/Lectures/521-Lecture 7.md",
-    "Classes/DSCI511/Lectures/511-Lecture 8.md",
-    "Classes/DSCI511/Lectures/511-Lecture 7.md",
     "HTML import",
     "Lecture 3_ Advanced data wrangling with Pandas — DSCI 511 Python Programming for Data Science.pdf",
-    "HTML import/Attachments/dsci511_header2.png",
-    "HTML import/Attachments/hex_sticker_small.png",
     "HTML import/Attachments",
     "Classes/DSCI521/Labs",
     "Classes/DSCI521/Lectures",
