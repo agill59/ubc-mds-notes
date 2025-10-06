@@ -1,6 +1,6 @@
 {
-  "findText": "::: {.cell execution.*",
-  "replaceText": "",
+  "findText": "Out\\[\\d+\\]:",
+  "replaceText": "```",
   "useRegEx": true,
   "selOnly": false,
   "caseInsensitive": false,

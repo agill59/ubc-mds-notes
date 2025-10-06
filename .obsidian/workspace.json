@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e2fe1716b0fbe1f8",
+        "id": "74daf044c474f23f",
         "type": "tabs",
         "children": [
           {
-            "id": "02b66826a9eeeb4d",
+            "id": "dc932083fae9aeb2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Classes/Block2/DSCI571/Lectures/571-Lecture 2.md",
+                "file": "Classes/Block2/DSCI531/Lectures/531-Lecture 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "571-Lecture 2"
+              "title": "531-Lecture 1"
             }
           }
         ]
@@ -171,23 +171,26 @@
       "obsidian-importer:Open Importer": false
     }
   },
-  "active": "2072c29422f956a9",
+  "active": "dc932083fae9aeb2",
   "lastOpenFiles": [
-    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006093924.png",
-    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006093817.png",
-    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006093549.png",
-    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006092910.png",
-    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006092824.png",
-    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006092742.png",
-    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006092558.png",
-    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006092526.png",
-    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006092448.png",
-    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006092417.png",
-    "Classes/Block2/DSCI571/Lectures/img2/Pasted image 20251006092213.png",
-    "Classes/Block2/DSCI571/Lectures/571-Lecture 1.md",
-    "Classes/Block2/DSCI571/Lectures/571-Lecture 2.md",
+    "Classes/Block2/DSCI531/Lectures/Attachments-1/1-intro-viz-altair-ggplot_123_1.png",
     "Classes/Block2/DSCI531/Lectures/531-Lecture 1.md",
+    "Classes/Block2/DSCI531/Lectures/Attachments-1/1-intro-viz-altair-ggplot_118_0.png",
+    "Classes/Block2/DSCI531/Lectures/Attachments-1/1-intro-viz-altair-ggplot_11_0.png",
+    "Classes/Block2/DSCI531/Lectures/Attachments-1/1-intro-viz-altair-ggplot_99_0.png",
+    "Classes/Block2/DSCI531/Lectures/Attachments-1/1-intro-viz-altair-ggplot_116_0.png",
+    "Classes/Block2/DSCI531/Lectures/Attachments-1/1-intro-viz-altair-ggplot_125_0.png",
+    "Classes/Block2/DSCI531/Lectures/Attachments-1/1-intro-viz-altair-ggplot_18_0.png",
+    "Classes/Block2/DSCI531/Lectures/Attachments-1/1-intro-viz-altair-ggplot_31_0.png",
     "Classes/Block2/DSCI531/Lectures/531-Lecture 2.md",
+    "Classes/Block2/DSCI531/Lectures/Attachments-1/1-intro-viz-altair-ggplot_121_1.png",
+    "Classes/Block2/DSCI531/Lectures/Attachments-1/1-intro-viz-altair-ggplot_112_1.png",
+    "Classes/Block2/DSCI531/Lectures/Attachments-1",
+    "HTML import",
+    "Classes/Block1/DSCI511/Lectures/511-Lecture 5.md",
+    "Classes/Block2/DSCI531/Lectures/img1",
+    "Classes/Block2/DSCI571/Lectures/571-Lecture 2.md",
+    "Classes/Block2/DSCI571/Lectures/571-Lecture 1.md",
     "Classes/Block2/DSCI571/Lectures/571-Lecture 7.md",
     "UBC-MDS.md",
     "Classes/DSCI511/Labs/511-Lab 3.md",
@@ -207,18 +210,13 @@
     "Classes/DSCI523/Worksheets/523-Worksheet 8.md",
     "Classes/DSCI523/Worksheets/523-Worksheet 7.md",
     "Classes/DSCI523/Worksheets/523-Worksheet 6.md",
-    "Classes/DSCI523/Worksheets/523-Worksheet 5.md",
-    "Classes/DSCI523/Lectures/523-Lecture 8.md",
-    "HTML import",
     "Lecture 3_ Advanced data wrangling with Pandas — DSCI 511 Python Programming for Data Science.pdf",
-    "HTML import/Attachments",
     "Classes/DSCI521/Labs",
     "Classes/DSCI521/Lectures",
     "Classes/DSCI521",
     "Classes/DSCI551/Labs",
     "Classes/DSCI551/Lectures",
     "Classes/DSCI551",
-    "Classes/DSCI523/Worksheets",
     "Untitled.canvas"
   ]
 }

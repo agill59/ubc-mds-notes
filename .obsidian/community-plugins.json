@@ -1,5 +1,6 @@
 [
   "obsidian-importer",
   "obsidian-git",
-  "obsidian-regex-replace"
+  "obsidian-regex-replace",
+  "obsidian-annotator"
 ]
