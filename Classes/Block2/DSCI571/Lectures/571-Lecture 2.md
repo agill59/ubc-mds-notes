@@ -2,7 +2,6 @@
 toc-title: Table of contents
 ---
 
-![](../img/571_banner.png)
 
 # Lecture 2: Machine Learning Fundamentals
 
@@ -214,7 +213,7 @@ plot_tree_decision_boundary_and_tree(
 :::
 
 ::: {.cell-output .cell-output-display}
-![](02_ml-fundamentals_files/figure-markdown/cell-6-output-2.png)
+![](img2/cell-6-output-2.png)
 :::
 :::
 
@@ -238,7 +237,7 @@ plot_tree_decision_boundary_and_tree(
 :::
 
 ::: {.cell-output .cell-output-display}
-![](02_ml-fundamentals_files/figure-markdown/cell-7-output-2.png)
+![](img2/cell-7-output-2.png)
 :::
 :::
 
@@ -261,7 +260,7 @@ plot_tree_decision_boundary_and_tree(
 :::
 
 ::: {.cell-output .cell-output-display}
-![](02_ml-fundamentals_files/figure-markdown/cell-8-output-2.png)
+![](img2/cell-8-output-2.png)
 :::
 :::
 
@@ -289,7 +288,7 @@ plot_tree_decision_boundary_and_tree(
 :::
 
 ::: {.cell-output .cell-output-display}
-![](02_ml-fundamentals_files/figure-markdown/cell-9-output-3.png)
+![](img2/cell-9-output-3.png)
 :::
 :::
 
@@ -308,7 +307,7 @@ plt.ylabel("error");
 ```
 
 ::: {.cell-output .cell-output-display}
-![](02_ml-fundamentals_files/figure-markdown/cell-10-output-1.png)
+![](img2/cell-10-output-1.png)
 :::
 :::
 
@@ -334,7 +333,7 @@ plt.ylabel("accuracy");
 ```
 
 ::: {.cell-output .cell-output-display}
-![](02_ml-fundamentals_files/figure-markdown/cell-11-output-1.png)
+![](img2/cell-11-output-1.png)
 :::
 :::
 
@@ -638,7 +637,7 @@ plt.ylabel("latitude");
 ```
 
 ::: {.cell-output .cell-output-display}
-![](02_ml-fundamentals_files/figure-markdown/cell-18-output-1.png)
+![](img2/cell-18-output-1.png)
 :::
 :::
 
@@ -650,7 +649,7 @@ custom_plot_tree(model, feature_names = X_train.columns.tolist())
 ```
 
 ::: {.cell-output .cell-output-display}
-![](02_ml-fundamentals_files/figure-markdown/cell-19-output-1.png)
+![](img2/cell-19-output-1.png)
 :::
 :::
 
@@ -679,7 +678,7 @@ plot_tree_decision_boundary_and_tree(model, X, y, height=10, width=18, eps=10)
 :::
 
 ::: {.cell-output .cell-output-display}
-![](02_ml-fundamentals_files/figure-markdown/cell-21-output-2.png)
+![](img2/cell-21-output-2.png)
 :::
 :::
 
@@ -716,7 +715,7 @@ plot_tree_decision_boundary(
 :::
 
 ::: {.cell-output .cell-output-display}
-![](02_ml-fundamentals_files/figure-markdown/cell-22-output-2.png)
+![](img2/cell-22-output-2.png)
 :::
 :::
 
@@ -1002,7 +1001,7 @@ mglearn.plots.plot_cross_validation()
 ```
 
 ::: {.cell-output .cell-output-display}
-![](02_ml-fundamentals_files/figure-markdown/cell-28-output-1.png)
+![](img2/cell-28-output-1.png)
 :::
 :::
 
@@ -1244,7 +1243,7 @@ results_df[["mean_train_error", "mean_cv_error"]].plot();
 ```
 
 ::: {.cell-output .cell-output-display}
-![](02_ml-fundamentals_files/figure-markdown/cell-35-output-1.png)
+![](img2/cell-35-output-1.png)
 :::
 :::
 
