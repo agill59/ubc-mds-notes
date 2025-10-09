@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Classes/Block2/DSCI531/Lectures/531-Lecture 2.md",
+                "file": "Classes/Block2/DSCI571/Labs/571-Lab 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "531-Lecture 2"
+              "title": "571-Lab 1"
             }
           }
         ]
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "create a link.md",
+                "file": "Classes/Block2/DSCI571/Labs/571-Lab 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from create a link"
+              "title": "Outgoing links from 571-Lab 1"
             }
           },
           {
@@ -142,16 +142,27 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "create a link.md",
+                "file": "Classes/Block2/DSCI571/Labs/571-Lab 1.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of create a link"
+              "title": "Outline of 571-Lab 1"
+            }
+          },
+          {
+            "id": "fe1df93fd4ae4ac8",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -173,52 +184,51 @@
   },
   "active": "6bbac547ba25787c",
   "lastOpenFiles": [
+    "img/lab1_e1.png.md",
+    "Classes/Block2/DSCI571/Labs/571-Lab 1.md",
+    "Classes/Block2/DSCI571/Labs/img1/Pasted image 20251009101005.png",
+    "img",
+    "Classes/Block2/DSCI571/Labs/img1/lab1_42_0.png",
+    "Classes/Block2/DSCI571/Labs/img1/lab1_94_4.png",
+    "Classes/Block2/DSCI571/Labs/img1/lab1_94_3.png",
+    "Classes/Block2/DSCI571/Labs/img1/lab1_94_2.png",
+    "Classes/Block2/DSCI571/Labs/img1/lab1_94_1.png",
+    "Classes/Block2/DSCI571/Labs/img1/lab1_94_0.png",
+    "Classes/Block2/DSCI571/Labs/img1/lab1_91_0.png",
+    "Classes/Block2/DSCI571/Labs/img1",
+    "Classes/Block2/DSCI512/Labs/512-Lab 1.md",
+    "Classes/Block2/DSCI571/Labs",
+    "UBC-MDS.md",
+    "lab1_110_1.png",
+    "Classes/Block2/DSCI512/Lectures/512-Lecture 3.md",
+    "Classes/Block2/DSCI512/Labs",
+    "Classes/Block2/DSCI571/Lectures/571-Lecture 4.md",
+    "Classes/Block2/DSCI552/Lectures/552-Lecture 4.md",
+    "Classes/Block2/DSCI531/Lectures/531-Lecture 2.md",
     "Classes/Block2/DSCI531/Lectures/531-Lecture 1.md",
-    "Classes/Block2/DSCI571/Lectures/571-Lecture 1.md",
     "Classes/Block2/DSCI512/Lectures/512-Lecture 2.md",
     "Classes/Block2/DSCI512/Lectures/512-Lecture 1.md",
+    "Classes/Block2/DSCI571/Lectures/571-Lecture 2.md",
+    "Classes/Block2/DSCI571/Lectures/571-Lecture 3.md",
+    "Classes/Block2/DSCI571/Lectures/571-Lecture 1.md",
+    "Classes/Block2/DSCI552/Lectures/552-Lecture 2.md",
+    "Classes/Block2/DSCI552/Lectures/552-Lecture 3.md",
     "Classes/Block2/DSCI512/Lectures/img1/Pasted image 20251007075213.png",
-    "Classes/Block2/DSCI512/Lectures/img1/Pasted image 20251007075122.png",
-    "Classes/Block2/DSCI512/Lectures/img1/01_complexity-big-O_66_1.svg",
     "Classes/Block2/DSCI512/Lectures/img1",
     "Classes/Block2/DSCI512/Lectures/01_complexity-big-O.md",
-    "Classes/Block2/DSCI512/Lectures/img1/01_complexity-big-O_68_1.svg",
-    "Classes/Block2/DSCI512/Lectures/img1/01_complexity-big-O_70_1.svg",
-    "Classes/Block2/DSCI512/Lectures/img1/01_complexity-big-O_73_1.svg",
-    "Classes/Block2/DSCI512/Lectures/img1/01_complexity-big-O_77_1.svg",
-    "Classes/Block2/DSCI512/Lectures/img1/01_complexity-big-O_79_1.svg",
-    "Classes/Block2/DSCI571/Lectures/571-Lecture 3.md",
-    "Classes/Block2/DSCI571/Lectures/571-Lecture 4.md",
-    "Classes/Block2/DSCI571/Lectures/571-Lecture 2.md",
-    "Classes/Block2/DSCI552/Lectures/552-Lecture 2.md",
-    "Classes/Block2/DSCI531/Lectures/531-Lecture 2.md",
     "Classes/Block2/DSCI552/Lectures/552-Lecture 1.md",
     "Classes/Block2/DSCI552/Lectures/552-Lecture 8.md",
-    "Classes/Block2/DSCI552/Lectures/552-Lecture 4.md",
-    "Classes/Block2/DSCI552/Lectures/imgs/Pasted image 20251005220013.png",
-    "Classes/Block2/DSCI552/Lectures/imgs/Pasted image 20251005215933.png",
-    "Classes/Block2/DSCI552/Lectures/552-Lecture 3.md",
     "Classes/Block2/DSCI531/Lectures/Attachments-1",
     "HTML import",
     "Classes/Block1/DSCI511/Lectures/511-Lecture 5.md",
     "Classes/Block2/DSCI531/Lectures/img1",
     "Classes/Block2/DSCI571/Lectures/571-Lecture 7.md",
-    "UBC-MDS.md",
     "Classes/DSCI511/Labs/511-Lab 3.md",
     "lab3.md",
     "Classes/DSCI521/Labs/521-Lab 3.md",
     "Classes/DSCI521/Labs/521-Lab 4.md",
-    "Classes/DSCI511/Worksheets/511-Worksheet 7.md",
-    "Classes/DSCI511/Worksheets/511-Worksheet 8.md",
-    "Classes/DSCI511/Worksheets/511-Worksheet 6.md",
-    "Classes/DSCI511/Worksheets/511-Worksheet 5.md",
-    "Classes/DSCI511/Labs/511-Lab 4.md",
     "Lecture 3_ Advanced data wrangling with Pandas — DSCI 511 Python Programming for Data Science.pdf",
     "Classes/DSCI521/Labs",
-    "Classes/DSCI521/Lectures",
-    "Classes/DSCI521",
-    "Classes/DSCI551/Labs",
-    "Classes/DSCI551/Lectures",
     "Untitled.canvas"
   ]
 }

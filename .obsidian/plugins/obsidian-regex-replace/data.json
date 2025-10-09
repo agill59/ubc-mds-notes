@@ -1,6 +1,6 @@
 {
-  "findText": "Out\\[\\d+\\]:",
-  "replaceText": "```",
+  "findText": "\\n\\s*\\n\\s*</div>",
+  "replaceText": "",
   "useRegEx": true,
   "selOnly": false,
   "caseInsensitive": false,
