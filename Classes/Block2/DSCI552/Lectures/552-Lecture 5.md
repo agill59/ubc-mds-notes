@@ -22,7 +22,6 @@ By the end of this lecture, you should be able to:
 
 Let us load the libraries for data wrangling, analysis, and plotting.
 
-::: {.cell slideshow="{\"slide_type\":\"fragment\"}" execution_count="1"}
 ``` {.r .cell-code}
 library(tidyverse)
 library(infer)

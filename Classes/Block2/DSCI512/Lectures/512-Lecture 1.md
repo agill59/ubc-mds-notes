@@ -1,4 +1,3 @@
-<img src="./static/dsci512_header.png" width="600">
 
 # Lecture 1: Introduction, Time Complexity, and big O Notation
 
