@@ -605,8 +605,7 @@ mem_table.sort_values("saving_MB", ascending=False)
 
 ### 3.2 Key take-aways:
 
-```{admonition} Key take-aways
-:class: tip
+
 - **Dtypes matter:** 64-bit numbers and `object` strings are expensive; downcasting and `category` can save **40–80%** memory.
 - **Parsed dates:** store dates as `datetime64[ns]` instead of plain strings.
 - **Measure, don’t guess:** use `memory_usage(deep=True)` for size in RAM and `psutil` for **peak** usage while loading.

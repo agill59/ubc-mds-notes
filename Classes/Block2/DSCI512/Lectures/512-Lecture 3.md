@@ -1,4 +1,4 @@
-<img src="static/dsci512_header.png" width="600">
+
 
 # Lecture 3: Graphs and Sparse Matrices
 
@@ -351,8 +351,7 @@ nx.draw(complete_graph, **draw_params)
     
 
 
-```{admonition} Exercise
-:class: tip
+
 What is the degree of vertex "VAN" above?
 
 **A.** 0 
@@ -1255,8 +1254,7 @@ Sparse matrices come up _a lot_ in practice, beyond just adjacency matrices in g
 - **Ratings:** We might represent an Amazon item by the user ratings, but only a small fraction of all users have rated a given item.
 - **Physical processes:** Many experimental datasets could be sparsed. During the Capstone project in 2019, some students examined images from a particle physics dataset, in which most of the sensors got zero signal.
 
-```{admonition} Exercise
-:class: tip
+
 
 I am storing a dataset on the annual trade between  countries in Europe. The data is modelled as a graph, where countries are vertices and the total value of goods traded between two countries are edges. What representation should I use?
 
@@ -1265,7 +1263,7 @@ A: Adjacency Matrix
 B: Adjacency List
 
 C: Sparce Matrix
-```
+
 
 #### Sparse Matrix timing
 

@@ -1,4 +1,3 @@
-<img src="static/dsci512_header.png" width="600">
 
 # Lecture 4: Graph Searches and Trees
 
@@ -59,10 +58,6 @@ By the end of this lecture, you will be able to:
 A tree is a **hierarchical data structure** used to organize and represent data in a parent–child relationship. A tree data structure has a root, branches, and leaves.
 
 In Graph theory, a tree is a connected graph containing no cycles. It means there is exactly one path between any two vertices and no edges ever point back. 
-
-![tree.jpg](static/tree.jpg)
-
-
 
 Trees are used in many areas of computer science, including operating systems, graphics, database systems, and computer networking. The difference between a tree in nature and a tree in computer science is that a tree data structure has its root at the top and its leaves on the bottom, as shown in the figure above.
 
@@ -468,8 +463,7 @@ def check_connected_using_bfs(g, node1, node2, verbose=False):
     return False
 ```
 
-```{admonition} Let's visualize it first!
-:class: tip
+
 Let's see a Graph search example on the [visualgo website](https://visualgo.net/en/dfsbfs?slide=1).
 - Here is the link to the website: [https://visualgo.net/en/](https://visualgo.net/en/)
 

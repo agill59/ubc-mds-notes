@@ -363,16 +363,16 @@ def g_nested(n):
 
 #### Common runtimes
 
-| Big O  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |  name  | change in runtime if I double $n$? |
-|-------|--------|-------|
-| $O(1)$ | constant | same |
-| $O(\log n)$ | logarithmic | increased by a constant |
-| $O(n)$ | linear | 2x | 
-| $O(n \log n)$ | linearithmic | roughly 2x | 
-| $O(n^2)$ | quadratic | 4x |
-| $O(n^3)$ | cubic | 8x |
-| $O(n^k)$ | polynomial | increase by a factor of $2^k$ | 
-| $O(2^n)$ | exponential | squared |
+| Big O  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | name         | change in runtime if I double $n$? |     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------------------------------- | --- |
+| $O(1)$                                                                                                                                                                                      | constant     | same                               |     |
+| $O(\log n)$                                                                                                                                                                                 | logarithmic  | increased by a constant            |     |
+| $O(n)$                                                                                                                                                                                      | linear       | 2x                                 |     |
+| $O(n \log n)$                                                                                                                                                                               | linearithmic | roughly 2x                         |     |
+| $O(n^2)$                                                                                                                                                                                    | quadratic    | 4x                                 |     |
+| $O(n^3)$                                                                                                                                                                                    | cubic        | 8x                                 |     |
+| $O(n^k)$                                                                                                                                                                                    | polynomial   | increase by a factor of $2^k$      |     |
+| $O(2^n)$                                                                                                                                                                                    | exponential  | squared                            |     |
 
 - We write $O(f(n))$ for some function $f(n)$.
 - You get the doubling time by taking $f(2n)/f(n)$.

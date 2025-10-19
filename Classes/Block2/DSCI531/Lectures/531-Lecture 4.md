@@ -1,10 +1,7 @@
 # Exploratory data analysis (EDA)
 
-::::{grid}
-
-:::{grid-item-card}
 **Lecture learning goals**
-^^^
+
 
 By the end of the lecture you will be able to:
 
@@ -15,9 +12,9 @@ By the end of the lecture you will be able to:
 5. Visualize counts of categorical variables.
    :::
 
-:::{grid-item-card}
+
 **Required activities**
-^^^
+
 
 Before class:
 
