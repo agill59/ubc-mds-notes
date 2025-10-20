@@ -969,7 +969,7 @@ model.predict(new_example)
 
 
     array(['A+'], dtype=object)
-```
+
 In summary, given a learned tree and a test example, during prediction
 time,\
 - Start at the top of the tree. Ask binary questions at each node and
@@ -1398,7 +1398,7 @@ plt.ylabel("latitude");
 
 
 ![](img/cell-51-output-1.png)
-```
+
 ##### Real boundary between Canada and USA
 
 In real life we know what's the boundary between USA and Canada.
@@ -1427,7 +1427,6 @@ plot_tree_decision_boundary_and_tree(
 
 
 ![](img/cell-52-output-1.png)
-```
 ``` {.python .cell-code}
 model = DecisionTreeClassifier(max_depth=2)
 model.fit(X.values, y)
@@ -1446,7 +1445,7 @@ plot_tree_decision_boundary_and_tree(
 
 
 ![](img/cell-53-output-1.png)
-```
+
 ## Final comments, summary, and reflection
 
 What did we learn today?
