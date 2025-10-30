@@ -421,9 +421,9 @@ y
 ``` {.python .cell-code}
 from sklearn.model_selection import train_test_split
 
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=123
-)  # 80%-20% train test split on X and y
+	X_train, X_test, y_train, y_test = train_test_split(
+	    X, y, test_size=0.2, random_state=123
+	)  # 80%-20% train test split on X and y
 
 # Print shapes
 shape_dict = {

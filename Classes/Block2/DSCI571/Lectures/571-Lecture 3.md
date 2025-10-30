@@ -1538,12 +1538,11 @@ mglearn.plots.plot_knn_regression(n_neighbors=3)
 - Often not that great test accuracy compared to the modern approaches.
 - It does not work well on datasets with many features or where most feature values are 0 most of the time (sparse datasets).    
 
-```{admonition} Attention
-:class: important
 
 For regular $k$-NN for supervised learning (not with sparse matrices), you should scale your features. We'll be looking into it soon. 
-```
 
+```
+		
 ### (Optional) Parametric vs non parametric 
 
 - You might see a lot of definitions of these terms.
