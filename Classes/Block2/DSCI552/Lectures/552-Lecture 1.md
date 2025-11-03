@@ -35,34 +35,31 @@ testing**.
 
 ### 1.1. Landscape of Statistical Questions
 
+#### 1.1.1. Descriptive
 
+This question seeks to summarize a characteristic of a set of data. There is no interpretation of the result itself as the result is a fact, an attribute of the data set you are working with.
 
-    #### 1.1.1. Descriptive
+##### Examples:
 
-    This question seeks to summarize a characteristic of a set of data. There is no interpretation of the result itself as the result is a fact, an attribute of the data set you are working with.
-
-    ##### Examples:
-
-    - What is the frequency of bacterial illnesses in a set of data collected from a group of individuals?
+- What is the frequency of bacterial illnesses in a set of data collected from a group of individuals?
     - How many people live in each US state?
 
-    #### 1.1.2. Exploratory
+#### 1.1.2. Exploratory
 
-    In this class of question, we analyze the data to see if there are patterns, trends, or relationships between variables **in a set of data**.
+In this class of question, we analyze the data to see if there are patterns, trends, or relationships between variables **in a set of data**.
 
-    ##### Examples:
+##### Examples:
 
-    - Do diets rich in certain foods have differing frequencies of bacterial illnesses **in a set of data** collected from a group of individuals? 
+- Do diets rich in certain foods have differing frequencies of bacterial illnesses **in a set of data** collected from a group of individuals? 
     - Does air pollution correlate with life expectancy **in a set of data** collected from groups of individuals from several regions in the United States?  
 
-    #### 1.1.3. Inferential
+#### 1.1.3. Inferential
 
-    In this class of question, we analyze the data to see if there are patterns, trends, or relationships between variables in a **representative sample**. We want to quantify how much is applicable to all individuals units in the population.
+In this class of question, we analyze the data to see if there are patterns, trends, or relationships between variables in a **representative sample**. We want to quantify how much is applicable to all individuals units in the population.
 
 
 
-    ```{important}
-    This process implies estimation along with its associated randomness!
+important: This process implies estimation along with its associated randomness!
 
 ##### Examples:
 

@@ -389,7 +389,7 @@ Backtracking is a technique for systematically exploring all possible configurat
 
 For our purpose here, once we have computed the solution using the opt table, the next step is to recover the exact sequence of decisions. This process is called **backtracking**.
 
-#### The `reconstruct_path` function (Otional)
+#### The `reconstruct_path` function (Optional)
 
 Below, we offer a `reconstruct_path` function showcasing backtracking.
 Let's walk you through it.

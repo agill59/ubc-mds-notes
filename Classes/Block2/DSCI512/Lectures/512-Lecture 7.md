@@ -257,9 +257,9 @@ Each time you call `climb(n)`—unless you hit a base case—you immediately bra
 
 Adding up all levels (a geometric series) up to depth $n$ gives:
 
-$
+$$
 1 + 2 + 4 + \dots + 2^n \;=\; 2^{\,n+1} - 1,
-$
+$$
 
 So the total number of calls—and thus the running time—is bounded by a constant times $2^n$. Hence $O(2^n)$).
 
