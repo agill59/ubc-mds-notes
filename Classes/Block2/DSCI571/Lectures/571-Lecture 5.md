@@ -1,4 +1,3 @@
-![](../img/571_banner.png)
 
 # Lecture 5: More preprocessing, text features
 
@@ -835,7 +834,6 @@ pd.DataFrame(data)
 
 ## Break (5 min)
 
-![](../img/eva-coffee.png)
 
 
 So far we talked about data where

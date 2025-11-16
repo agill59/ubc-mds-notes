@@ -1,4 +1,3 @@
-![](../img/571_banner.png)
 
 # Lecture 7: Naive Bayes
 
@@ -73,12 +72,8 @@ $X = \begin{bmatrix}1.0 & 4.0 & \ldots & & 3.0\\ 0.0 & 2.0 & \ldots & & 6.0\\ 1.
 - So we used `CountVectorizer` to convert text data into feature vectors where
     - each feature is a unique word in the text  
     - each feature value represents the frequency or presence/absence of the word in the given message         
-<!-- <center>    
-<img src='./img/bag-of-words.png' width="800">
-</center>        
- -->
 
-![](../img/bag-of-words.png)
+
 [Source](https://web.stanford.edu/~jurafsky/slp3/4.pdf)       
 
 <br><br><br><br>
@@ -96,7 +91,6 @@ Imagine you have trained a decision tree and are given the following new example
 - What will be the prediction? 
 - How would you assess the model's level of certainty at the corresponding leaf node?
 
-![](../img/spam_toy_decision_tree.png)
 
 <br><br>
 
@@ -307,9 +301,7 @@ Does it make it easier? In this case, we need the following probabilities.
 #### $P(\text{message} \mid \text{spam})$
 - The conditional probability $P(\text{message}\mid\text{spam})$ is hard to calculate because it requires a huge number of parameters and impossibly large training sets. 
 - In our toy example:
-    - $P(\text{message}\mid\text{spam}) = $$P(\text{I} \mid spam) \times P(\text{am} \mid spam, \text{I}) \times \dots \times P(\text{advice} \mid spam, \text{I am happy to offer some free})$
-
-    - $P(\text{message}\mid\text{ham}) = $$P(\text{I} \mid ham) \times P(\text{am} \mid ham, \text{I}) \times \dots \times P(\text{advice} \mid ham, \text{I am happy to offer some free})$
+    - $P(\text{message}\mid\text{spam}) = $$P(\text{I} \mid spam) \times P(\text{am} \mid spam, \text{I}) \times \dots \times P(\text{advice} \mid spam, \text{I am happy to offer some free}) - $P(\text{message}\mid\text{ham}) = $$$$P(\text{I} \mid ham) \times P(\text{am} \mid ham, \text{I}) \times \dots \times P(\text{advice} \mid ham, \text{I am happy to offer some free})$$
   
 - with large number of features, it would require huge numbers of parameters and impossibly large training sets. 
 - For example, imagine how hard it would be to estimate probability of the 5,000th word, given the previous 4,999 words.

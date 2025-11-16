@@ -1161,12 +1161,13 @@ A linear model learns these coefficients or weights from the training data!
 
 So a linear classifier is a linear function of the input `X`, followed by a threshold. 
 
+$$
 \begin{equation}
 \begin{split}
 z =& w_1x_1 + \dots + w_dx_d + b\\
 =& w^Tx + b
 \end{split}
-\end{equation}
+\end{equation}$$
 
 $$\hat{y} = \begin{cases}
          1, & \text{if } z \geq r\\
